@@ -15,7 +15,7 @@ router(app);
 
 app.use("/state", express.static("public/service_run.html"));
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 app.listen(port, function () {
   console.log(chalk.blue("The server is running on http://localhost:" + port));
 });

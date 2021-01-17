@@ -14,7 +14,7 @@ const getSKills = async (username) => {
 
 const calculateSalary = async (data) => {
   try {
-    let jobsForAverage = await store.getJobsForAverage(data.skill.name);
+    let jobsForAverage = await store.getJobsForAverage(data.skill);
     var totalSalary = 0;
     jobsForAverage.forEach((job) => {
       if (job.compensation.data.currency === "COP$") {
