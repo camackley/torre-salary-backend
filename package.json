@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,6 @@
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
     "express": "^4.17.1",
-    "https": "^1.0.0",
     "xmlhttprequest": "^1.8.0"
   }
 }
