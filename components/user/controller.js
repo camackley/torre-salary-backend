@@ -6,7 +6,7 @@ const getSKills = async (username) => {
 
     let isRecommendedFilter = ({ recommendations }) => recommendations > 0;
     let recommendedStrength = userStrengths.filter(isRecommendedFilter);
-    return recommendedStrength;
+    return recommendedStrength.length > 0 ? recommendedStrength : userStrengths;
   } catch (error) {
     throw error;
   }
