@@ -39,7 +39,7 @@ const calculateSalary = async (username, data) => {
         periodicity: "yearly",
       },
       user: userInfo,
-      jobs: jobsForAverage.slice(0, 11),
+      jobs: jobsForAverage.slice(0, 12),
     };
   } catch (error) {
     throw error;
