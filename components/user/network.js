@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post("/salary/:username", (req, res) => {
   controller
-    .calculateSalary(req.body)
+    .calculateSalary(req.params.username, req.body)
     .then((data) => response.success(res, data, 200))
     .catch((error) => response.error(req, res, "Unexpected Error", 500, error));
 });

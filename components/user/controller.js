@@ -12,7 +12,7 @@ const getSKills = async (username) => {
   }
 };
 
-const calculateSalary = async (data) => {
+const calculateSalary = async (username, data) => {
   try {
     let jobsForAverage = await store.getJobsForAverage(data.skill);
     var totalSalary = 0;
@@ -30,12 +30,15 @@ const calculateSalary = async (data) => {
     });
     totalSalary = Math.round(totalSalary / jobsForAverage.length);
 
+    let userInfo = await store.getUser(username);
+
     return {
       salaryEspected: {
         currency: "USD$",
         amount: totalSalary,
         periodicity: "yearly",
       },
+      user: userInfo,
       jobs: jobsForAverage.slice(0, 19),
     };
   } catch (error) {

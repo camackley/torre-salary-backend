@@ -52,7 +52,16 @@ const getJobsForAverage = async (role) => {
   return jobsInfo.results;
 };
 
+const getUser = async (username) => {
+  let UserData = await NetworkHelper.getHttp(
+    "https://torre.bio/api/bios/" + username
+  );
+
+  return UserData;
+};
+
 module.exports = {
   getUserStrength,
   getJobsForAverage,
+  getUser,
 };
