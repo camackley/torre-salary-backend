@@ -1,3 +1,5 @@
+# ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `This repository has been deprecated because it was created for a technical test and the data provider is blocked 🫥`
+
 # [Torre Salary Api](https://torre-salary.web.app/)
 
 Web Service to process data for **Torre Salary**, This is fed by Torre data from open Api, with this project We can know what is the aspire salary for us,based average of opportunities offers
